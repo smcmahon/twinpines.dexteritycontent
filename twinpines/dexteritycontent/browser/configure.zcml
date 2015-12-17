@@ -1,0 +1,16 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="twinpines">
+
+  <browser:page
+      for="twinpines.dexteritycontent.interfaces.IParticipatingCoop"
+      name="view"
+      template="coop.pt"
+      permission="zope2.View"
+      />
+
+
+</configure>

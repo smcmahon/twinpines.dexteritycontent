@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <object name="coop" meta_type="Dexterity FTI" i18n:domain="plone"
    xmlns:i18n="http://xml.zope.org/namespaces/i18n">
- <property name="title" i18n:translate="">Participating Coop</property>
+ <property name="title" i18n:translate="">Coop</property>
  <property name="description" i18n:translate="">None</property>
  <property name="icon_expr">string:${portal_url}/document_icon.png</property>
  <property name="factory">coop</property>
@@ -18,7 +18,7 @@
  </property>
  <property name="default_view_fallback">False</property>
  <property name="add_permission">cmf.AddPortalContent</property>
- <property name="klass">plone.dexterity.content.Container</property>
+ <property name="klass">twinpines.dexteritycontent.content.ParticipatingCoop</property>
  <property name="behaviors">
   <element value="plone.app.content.interfaces.INameFromTitle"/>
   <element value="plone.app.dexterity.behaviors.metadata.IBasic"/>
@@ -35,6 +35,16 @@
         &lt;required&gt;False&lt;/required&gt;
         &lt;title&gt;Fund Name&lt;/title&gt;
       &lt;/field&gt;
+      &lt;field name="photo" type="plone.namedfile.field.NamedBlobImage"&gt;
+        &lt;description/&gt;
+        &lt;required&gt;False&lt;/required&gt;
+        &lt;title&gt;Photo&lt;/title&gt;
+      &lt;/field&gt;
+      &lt;field name="text" type="plone.app.textfield.RichText" indexer:searchable="true"&gt;
+        &lt;description/&gt;
+        &lt;required&gt;False&lt;/required&gt;
+        &lt;title&gt;Text&lt;/title&gt;
+      &lt;/field&gt;
       &lt;field name="street_address" type="zope.schema.TextLine"&gt;
         &lt;description/&gt;
         &lt;required&gt;False&lt;/required&gt;
@@ -44,11 +54,6 @@
         &lt;description/&gt;
         &lt;required&gt;False&lt;/required&gt;
         &lt;title&gt;City, State, Zip&lt;/title&gt;
-      &lt;/field&gt;
-      &lt;field name="email" type="zope.schema.TextLine"&gt;
-        &lt;description/&gt;
-        &lt;required&gt;False&lt;/required&gt;
-        &lt;title&gt;Email&lt;/title&gt;
       &lt;/field&gt;
       &lt;field name="phone" type="zope.schema.TextLine"&gt;
         &lt;description/&gt;
@@ -65,15 +70,10 @@
         &lt;required&gt;False&lt;/required&gt;
         &lt;title&gt;Web Site Address&lt;/title&gt;
       &lt;/field&gt;
-      &lt;field name="photo" type="plone.namedfile.field.NamedBlobImage"&gt;
+      &lt;field name="email" type="zope.schema.TextLine"&gt;
         &lt;description/&gt;
         &lt;required&gt;False&lt;/required&gt;
-        &lt;title&gt;Photo&lt;/title&gt;
-      &lt;/field&gt;
-      &lt;field name="text" type="plone.app.textfield.RichText" indexer:searchable="true"&gt;
-        &lt;description/&gt;
-        &lt;required&gt;False&lt;/required&gt;
-        &lt;title&gt;Text&lt;/title&gt;
+        &lt;title&gt;Email&lt;/title&gt;
       &lt;/field&gt;
     &lt;/schema&gt;
   &lt;/model&gt;</property>
