@@ -8,10 +8,8 @@
 <body>
 
 <metal:title fill-slot="content-title">
-    <h1 metal:use-macro="context/kss_generic_macros/macros/generic_title_view">
-        Generic KSS Title. Is rendered with class="documentFirstHeading".
-    </h1>
     <h2 class="field_fund_name" tal:condition="here/fund_name" tal:content="here/fund_name" />
+    <h1 metal:use-macro="context/kss_generic_macros/macros/generic_title_view" />
 </metal:title>
 
 
